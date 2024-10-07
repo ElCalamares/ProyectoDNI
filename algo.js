@@ -1,9 +1,8 @@
 let dni="72377566Q";//prompt("Dame tu DNI por favor");
-let dniInt=0;
+let dniInt="";
 let letra="";
 for (let i = 0; i < dni.length-1; i++) {
     dniInt+=dni[i];
-    console.log(dniInt);
 }
 switch(dniInt%23){
     case 0:
@@ -79,9 +78,13 @@ switch(dniInt%23){
         letra=-1;
         break;
 }
-console.log(letra);
-if(letra==dni[8]){
-    console.log("Tu DNI esta bien")
+if(letra==-1){
+    console.log("Algo salio mal");
 }else{
-    console.log("Esta mal");
+    console.log(letra);
+    if(letra==dni[8]){
+        console.log("Tu DNI esta bien")
+    }else{
+        console.log("Esta mal");
+    } 
 }
